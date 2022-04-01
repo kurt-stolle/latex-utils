@@ -10,12 +10,13 @@ First, build the Docker container using `docker build -t latex-utils .`. When us
 After building the image, the environment is accessed through a container instance. Bind mount the project directory containing your LaTeX sources into the `/var/tex` directory.
 
 ### Make
-A `make` configuration is included, providing a basic `build` and `create` command. Example usage:
+A `make` configuration is included. Example usage:
 ```bash
 make build
-make create PROJECT_NAME="my_project" PROJECT_ROOT="$HOME/my_project"
-docker start -it my_project my_main_file.tex
+make create PROJECT_NAME="my_project" PROJECT_ROOT="./src/my_project"
+make start PROJECT_NAME="my_project"
 ```
+Use `make compile PROJECT_ROOT="./src/my_project` to compile in a dummy container.
 
 ### Additional dependencies
 Add packages by creating a derivative Dockerfile and installing the desired software.
