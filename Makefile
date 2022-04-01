@@ -18,7 +18,7 @@ create:
 # Starts a Docker container by project name.
 start:
 	docker start \
-		-ita
+		-ita \
 		$(PROJECT_NAME) 
 
 # Compile a a project in an ad-hoc continaer
