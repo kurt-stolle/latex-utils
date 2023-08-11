@@ -10,6 +10,6 @@ VOLUME /var/tex
 
 # Entrypoint
 SHELL ["/bin/bash"]
-ENTRYPOINT ["latexmk"]
-CMD ["main.tex"]
+# ENTRYPOINT ["latexmk"]
+# CMD ["main.tex"]
 
